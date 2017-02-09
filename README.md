@@ -1,8 +1,14 @@
-[![Build Status](https://travis-ci.org/diversario/node-ssdp.svg?branch=master)](https://travis-ci.org/diversario/node-ssdp)
-[![Coverage Status](https://img.shields.io/coveralls/diversario/node-ssdp.svg)](https://coveralls.io/r/diversario/node-ssdp?branch=master)
-[![Dependency Status](https://gemnasium.com/diversario/node-ssdp.png)](https://gemnasium.com/diversario/node-ssdp)
-[![NPM version](https://badge.fury.io/js/node-ssdp.svg)](http://badge.fury.io/js/node-ssdp)
-[![Stories in Ready](https://badge.waffle.io/diversario/node-ssdp.png?label=ready&title=Ready)](https://waffle.io/diversario/node-ssdp)
+# SSDP fork for React Native from node
+
+This is a fork of `node-ssdp` that uses `react-native-udp` instead of `dgram` to enable react multicast messaging and plain socket control. The API is the same as in the forked version. Make sure you properly install and link [react-native-udp](https://github.com/tradle/react-native-udp) and set the `Buffer` variable as global or install the browser-compatible npm buffer package.
+
+Make sure you close all the sockets you open and never try to reopen one already open, mobile OSs and React Native are very aggresive both with security and performance, so a misuse could kill your process.
+
+<a href="https://getyeti.co" target="_blank">
+   <img alt="works with yeti" src="https://github.com/netbeast/react-native-dial/raw/master/works-with-yeti.png" width="100" />
+</a>
+
+> This package powers [Yeti Smart Home](https://getyeti.co) and is used in production. It is maintained with our developers's free time, PRs and issues are more than welcome.
 
 This is a fork of `node-ssdp` that uses `react-native-udp` instead of `dgram` to enable react multicast messaging and plain socket control. The API is the same as in the forked version. 
 
@@ -152,6 +158,9 @@ Run your project (Cmd+R)
     })
 ```
 
+
+# Legacy docs from the forked repo
+
 Take a look at `example` directory as well to see examples or client and server.
 
 ##Configuration
@@ -185,5 +194,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-51511945-1/node-ssdp/README.md)](https://github.com/igrigorik/ga-beacon)
