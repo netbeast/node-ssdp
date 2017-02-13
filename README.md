@@ -17,12 +17,6 @@ npm install react-native-ssdp
 rnpm link
 ```
 
-Make sure you set `Buffer` as global in `react-native-udp`'s UdpSockets.js (noted filename end with letter s)
-
-```javascript
-global.Buffer = global.Buffer || require('buffer').Buffer
-```
-
 ## Things to take note
 Make sure you close all the sockets you open and never try to reopen one already open, mobile OSs and React Native are very aggresive both with security and performance, so a misuse could kill your process.
 
