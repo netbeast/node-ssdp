@@ -24,7 +24,9 @@ global.Buffer = global.Buffer || require('buffer').Buffer
 ```
 
 ## Things to take note
-Make sure you close all the sockets you open and never try to reopen one already open, mobile OSs and React Native are very aggresive both with security and performance, so a misuse could kill your process.
+- Be aware that the Android emulator does not support incoming UDP traffic, so the client will not get any responses to search requests.  For best results, test on a real device when using Android.  The iOS simulator, on the other hand, works just fine.
+
+- Make sure you close all the sockets you open and never try to reopen one already open, mobile OSs and React Native are very aggresive both with security and performance, so a misuse could kill your process.
 
 ## Usage (Android)
 
@@ -48,7 +50,7 @@ dependencies {
 	compile project(':react-native-network-info')
 }
 ```
-	
+
 ### register module in MainActivity.java
 
 #### For RN 0.19.0 and higher
