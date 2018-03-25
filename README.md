@@ -17,12 +17,6 @@ npm install react-native-ssdp
 rnpm link
 ```
 
-Make sure you set `Buffer` as global in `react-native-udp`'s UdpSockets.js (noted filename end with letter s)
-
-```javascript
-global.Buffer = global.Buffer || require('buffer').Buffer
-```
-
 ## Things to take note
 - Be aware that the Android emulator does not support incoming UDP traffic, so the client will not get any responses to search requests.  For best results, test on a real device when using Android.  The iOS simulator, on the other hand, works just fine.
 
