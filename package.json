@@ -46,5 +46,9 @@
     "example": "example",
     "test": "test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.6.0",
+    "react-native-network-info": "^5.2.1"
+  }
 }
